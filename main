@@ -1,0 +1,35 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/zxciaz/VenyxUI/main/Reuploaded"))() --someone reuploaded it so I put it in place of the original back up so guy can get free credit.
+local venyx = library.new("Private EB", 5013109572)
+
+-- themes
+local themes = {
+Background = Color3.fromRGB(24, 24, 24),
+Glow = Color3.fromRGB(0, 0, 0),
+Accent = Color3.fromRGB(10, 10, 10),
+LightContrast = Color3.fromRGB(20, 20, 20),
+DarkContrast = Color3.fromRGB(14, 14, 14),  
+TextColor = Color3.fromRGB(255, 255, 255)
+}
+
+-- first page
+local page = venyx:addPage("No Recoil", 5012544693)
+local section1 = page:addSection("Keybind")
+local section2 = page:addSection("SCRIPT")
+
+section2:addKeybind("Toggle Keybind", Enum.KeyCode.One, function()
+    print("Activated Keybind")
+    venyx:toggle()
+    end, function()
+    print("Changed Keybind")
+    end)
+
+section2:addButton("Anti-Kick (EXECUTE BEFORE EXECUTING NO RECOIL)", function(value)
+    loadstring(game:HttpGet("https://pastebin.com/raw/AKzSetKY"))()
+end)
+
+section2:addButton("No Recoil (PRESS WHEN GUN EQUIPPED)", function(value)
+    loadstring(game:HttpGet("https://pastebin.com/raw/LJueF6dH"))()
+end)
+
+-- load
+venyx:SelectPage(venyx.pages[1], true) -- no default for more freedom
