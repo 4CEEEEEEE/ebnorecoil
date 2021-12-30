@@ -16,7 +16,7 @@ local page = venyx:addPage("No Recoil", 5012544693)
 local section1 = page:addSection("Keybind")
 local section2 = page:addSection("SCRIPT")
 
-section2:addKeybind("Toggle Keybind", Enum.KeyCode.One, function()
+section1:addKeybind("Toggle Keybind", Enum.KeyCode.One, function()
     print("Activated Keybind")
     venyx:toggle()
     end, function()
